@@ -10,6 +10,14 @@
 
 
 //challenge below
+const tiranaLondon = 2000;
+const tiranaRome = 500;
+const tiranaPrishtina = 200;
+const LondonRome = 1200;
+const LondonPrishtina = 2500;
+const RomePrishtina = 700;
+
+
 
 
  let  age = Number(prompt("How old are you?"))
@@ -22,22 +30,22 @@
  Stations to choose from: "Tirana, London, Rome, Prishtina"`);
  const pricePerKm = 0.21;
  
- const km= start.toLowerCase()===`tirana` && destination.toLowerCase() ===`prishtina`? 200:
- start.toLowerCase()===`tirana` && destination.toLowerCase() ===`london`?2000:
- start.toLowerCase()===`tirana` && destination.toLowerCase() ===`rome`?500:
+ const km= start.toLowerCase()===`tirana` && destination.toLowerCase() ===`prishtina`? tiranaPrishtina:
+ start.toLowerCase()===`tirana` && destination.toLowerCase() ===`london`?tiranaLondon:
+ start.toLowerCase()===`tirana` && destination.toLowerCase() ===`rome`?tiranaRome:
  start.toLowerCase()===`tirana` && destination.toLowerCase() ===`tirana`?0:
- start.toLowerCase()===`prishtina` && destination.toLowerCase() ===`tirana`?200:
- start.toLowerCase()===`prishtina` && destination.toLowerCase() ===`London`?2500:
- start.toLowerCase()===`prishtina` && destination.toLowerCase() ===`rome`?700:
+ start.toLowerCase()===`prishtina` && destination.toLowerCase() ===`tirana`?tiranaPrishtina:
+ start.toLowerCase()===`prishtina` && destination.toLowerCase() ===`London`?LondonPrishtina:
+ start.toLowerCase()===`prishtina` && destination.toLowerCase() ===`rome`?RomePrishtina:
  start.toLowerCase()===`prishtina` && destination.toLowerCase() ===`prishtina`?0:
- start.toLowerCase()===`london` && destination.toLowerCase() ===`tirana`?2000:
+ start.toLowerCase()===`london` && destination.toLowerCase() ===`tirana`?tiranaLondon:
  start.toLowerCase()===`london` && destination.toLowerCase() ===`london`?0:
- start.toLowerCase()===`london` && destination.toLowerCase() ===`rome`?1200:
- start.toLowerCase()===`london` && destination.toLowerCase() ===`prishtina`?2500:
- start.toLowerCase()===`rome` && destination.toLowerCase() ===`tirana`?500:
- start.toLowerCase()===`rome` && destination.toLowerCase() ===`london`?1200:
+ start.toLowerCase()===`london` && destination.toLowerCase() ===`rome`?LondonRome:
+ start.toLowerCase()===`london` && destination.toLowerCase() ===`prishtina`?LondonPrishtina:
+ start.toLowerCase()===`rome` && destination.toLowerCase() ===`tirana`?tiranaRome:
+ start.toLowerCase()===`rome` && destination.toLowerCase() ===`london`?LondonRome:
  start.toLowerCase()===`rome` && destination.toLowerCase() ===`rome`?0:
- start.toLowerCase()===`rome` && destination.toLowerCase() ===`prishtina`?700:
+ start.toLowerCase()===`rome` && destination.toLowerCase() ===`prishtina`?RomePrishtina:
  `Can't you read?`;
  let normalPrice = km*pricePerKm;
 
