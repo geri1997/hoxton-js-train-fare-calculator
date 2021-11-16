@@ -31,21 +31,21 @@ const RomePrishtina = 700;
  const pricePerKm = 0.21;
  
  const km= start.toLowerCase()===`tirana` && destination.toLowerCase() ===`prishtina`? tiranaPrishtina:
- start.toLowerCase()===`tirana` && destination.toLowerCase() ===`london`?tiranaLondon:
- start.toLowerCase()===`tirana` && destination.toLowerCase() ===`rome`?tiranaRome:
- start.toLowerCase()===`tirana` && destination.toLowerCase() ===`tirana`?0:
- start.toLowerCase()===`prishtina` && destination.toLowerCase() ===`tirana`?tiranaPrishtina:
- start.toLowerCase()===`prishtina` && destination.toLowerCase() ===`London`?LondonPrishtina:
- start.toLowerCase()===`prishtina` && destination.toLowerCase() ===`rome`?RomePrishtina:
- start.toLowerCase()===`prishtina` && destination.toLowerCase() ===`prishtina`?0:
- start.toLowerCase()===`london` && destination.toLowerCase() ===`tirana`?tiranaLondon:
- start.toLowerCase()===`london` && destination.toLowerCase() ===`london`?0:
- start.toLowerCase()===`london` && destination.toLowerCase() ===`rome`?LondonRome:
- start.toLowerCase()===`london` && destination.toLowerCase() ===`prishtina`?LondonPrishtina:
- start.toLowerCase()===`rome` && destination.toLowerCase() ===`tirana`?tiranaRome:
- start.toLowerCase()===`rome` && destination.toLowerCase() ===`london`?LondonRome:
- start.toLowerCase()===`rome` && destination.toLowerCase() ===`rome`?0:
- start.toLowerCase()===`rome` && destination.toLowerCase() ===`prishtina`?RomePrishtina:
+ start.toLowerCase().replaceAll(' ','')===`tirana` && destination.toLowerCase().replaceAll(' ','') ===`london`?tiranaLondon:
+ start.toLowerCase().replaceAll(' ','')===`tirana` && destination.toLowerCase().replaceAll(' ','') ===`rome`?tiranaRome:
+ start.toLowerCase().replaceAll(' ','')===`tirana` && destination.toLowerCase().replaceAll(' ','') ===`tirana`?0:
+ start.toLowerCase().replaceAll(' ','')===`prishtina` && destination.toLowerCase().replaceAll(' ','') ===`tirana`?tiranaPrishtina:
+ start.toLowerCase().replaceAll(' ','')===`prishtina` && destination.toLowerCase().replaceAll(' ','') ===`London`?LondonPrishtina:
+ start.toLowerCase().replaceAll(' ','')===`prishtina` && destination.toLowerCase().replaceAll(' ','') ===`rome`?RomePrishtina:
+ start.toLowerCase().replaceAll(' ','')===`prishtina` && destination.toLowerCase().replaceAll(' ','') ===`prishtina`?0:
+ start.toLowerCase().replaceAll(' ','')===`london` && destination.toLowerCase().replaceAll(' ','') ===`tirana`?tiranaLondon:
+ start.toLowerCase().replaceAll(' ','')===`london` && destination.toLowerCase().replaceAll(' ','') ===`london`?0:
+ start.toLowerCase().replaceAll(' ','')===`london` && destination.toLowerCase().replaceAll(' ','') ===`rome`?LondonRome:
+ start.toLowerCase().replaceAll(' ','')===`london` && destination.toLowerCase().replaceAll(' ','') ===`prishtina`?LondonPrishtina:
+ start.toLowerCase().replaceAll(' ','')===`rome` && destination.toLowerCase().replaceAll(' ','') ===`tirana`?tiranaRome:
+ start.toLowerCase().replaceAll(' ','')===`rome` && destination.toLowerCase().replaceAll(' ','') ===`london`?LondonRome:
+ start.toLowerCase().replaceAll(' ','')===`rome` && destination.toLowerCase().replaceAll(' ','') ===`rome`?0:
+ start.toLowerCase().replaceAll(' ','')===`rome` && destination.toLowerCase().replaceAll(' ','') ===`prishtina`?RomePrishtina:
  `Can't you read?`;
  let normalPrice = km*pricePerKm;
 
