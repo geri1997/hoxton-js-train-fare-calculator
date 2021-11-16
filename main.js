@@ -21,7 +21,7 @@ const RomePrishtina = 700;
 
 
  let  age = Number(prompt("How old are you?"))
-
+ 
  let  start = prompt(`
  Where from?
  Stations to choose from: "Tirana, London, Rome, Prishtina"
@@ -46,7 +46,16 @@ const RomePrishtina = 700;
  start.toLowerCase().replaceAll(' ','')===`rome` && destination.toLowerCase().replaceAll(' ','') ===`london`?LondonRome:
  start.toLowerCase().replaceAll(' ','')===`rome` && destination.toLowerCase().replaceAll(' ','') ===`rome`?0:
  start.toLowerCase().replaceAll(' ','')===`rome` && destination.toLowerCase().replaceAll(' ','') ===`prishtina`?RomePrishtina:
- `Can't you read?`;
+ alert(`Can't you read?`);
  let normalPrice = km*pricePerKm;
-
+ let stations=['tirana','rome','london','prishtina']
+ if(age<0 || Number.isNaN(age)){
+    alert('Wrong age')
+    
+ }else if(!stations.includes(start.toLowerCase())){
+    alert('Wrong station')
+} else if(!stations.includes(destination.toLowerCase())){
+    alert('Wrong station')
+}else{
  alert(`You have to pay £${age<18?normalPrice*0.2:age>65?normalPrice*0.4:normalPrice} for the ride.`);
+}
