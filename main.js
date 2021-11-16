@@ -1,21 +1,28 @@
-// This time we're going to build a train fare calculator. Simple enough, right? 
-// We're not looking for something too fancy, but you should be able to input your age and the distance you're travelling and get your ticket price.
+// let age = Number(prompt("How old are you?"))
+// let km = Number(prompt("How far are you travelling?"))
+// const pricePerKm = 0.21;
+// let normalPrice = km*pricePerKm;
 
-// Instructions
-// - Ask the user for their age and how far they are travelling (in km)
-//    -- The price per travelled km will be £0.21
-//    -- Junior passengers (under 18) get a 20% discount
-//    -- Senior passengers (over 65) get a 40% discount
-// - Based on the answers, show a message which tells the user how much they will pay for the ride.
+// // const stations=['Tirana', 'London', 'Rome', 'Prishtina'];
 
-// Challenge
-// We're going to rewrite our program so that the user chooses a starting point and a destination from a list of stations, besides inputting their age and then get the ticket price. 
-// You can come up with the stations' names and distances. Try also to code it so that you only need to change the price per km in one place, and all the stations should have the updated price
+// alert(`You have to pay £${age<18?normalPrice*0.2:age>65?normalPrice*0.4:normalPrice} for the ride.`);
 
-let age = Number(prompt("How old are you?"))
-let km = Number(prompt("How far are you travelling?"))
-const pricePerKm = 0.21;
-let normalPrice = km*pricePerKm;
-// const stations=['Tirana', 'London', 'Rome', 'Prishtina'];
 
-alert(`You have to pay £${age<18?normalPrice*0.2:age>65?normalPrice*0.4:normalPrice} for the ride.`);
+
+//challenge below
+
+
+ let  age = Number(prompt("How old are you?"))
+
+ let  start = prompt(`
+ Where from?
+ Stations to choose from: "Tirana, London, Rome, Prishtina"
+ `);
+ let  destination = prompt(`Where to?
+ Stations to choose from: "Tirana, London, Rome, Prishtina"`);
+ const pricePerKm = 0.21;
+ 
+ const km= start.toLowerCase()===`tirana` && destination.toLowerCase() ===`prishtina`? 200:start.toLowerCase()===`tirana` && destination.toLowerCase() ===`london`?1000:start.toLowerCase()===`tirana` && destination.toLowerCase() ===`rome`?500:start.toLowerCase()===`tirana` && destination.toLowerCase() ===`tirana`?0:start.toLowerCase()===`prishtina` && destination.toLowerCase() ===`tirana`?200:start.toLowerCase()===`prishtina` && destination.toLowerCase() ===`London`?2500:start.toLowerCase()===`prishtina` && destination.toLowerCase() ===`rome`?700:start.toLowerCase()===`prishtina` && destination.toLowerCase() ===`prishtina`?0:start.toLowerCase()===`london` && destination.toLowerCase() ===`tirana`?2000:start.toLowerCase()===`london` && destination.toLowerCase() ===`london`?0:start.toLowerCase()===`london` && destination.toLowerCase() ===`rome`?1200:start.toLowerCase()===`london` && destination.toLowerCase() ===`prishtina`?2500:start.toLowerCase()===`rome` && destination.toLowerCase() ===`tirana`?500:start.toLowerCase()===`rome` && destination.toLowerCase() ===`london`?1200:start.toLowerCase()===`rome` && destination.toLowerCase() ===`rome`?0:start.toLowerCase()===`rome` && destination.toLowerCase() ===`prishtina`?700:`Can't you read?`;
+ let normalPrice = km*pricePerKm;
+
+ alert(`You have to pay £${age<18?normalPrice*0.2:age>65?normalPrice*0.4:normalPrice} for the ride.`);
